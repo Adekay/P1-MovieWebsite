@@ -1,0 +1,273 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Must See Movies!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+            background-color:#2D475F;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-base {
+            margin-bottom: 20px;
+            padding-top: 5px;
+            background-color: #F4EAD5;
+        }
+        .movie-base:hover {
+            background-color: #F7F3F3;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: black;
+        }
+        #navbar {
+          background-color: #253646;
+        }
+        #navbar-text {
+          color: #F7F3F3;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-base').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+    <script>
+      $(function() {
+        $( document ).tooltip();
+      });
+    </script>    
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div id="navbar" class="navbar navbar-fixed-top" role="navigation">
+        <div id="navbar" class="container">
+          <div id="navbar" class="navbar-header">
+            <a id="navbar-text" class="navbar-brand" href="#">List of Favorite Movies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+<div class="col-md-4 col-lg-4 movie-base text-center">
+    <div class="movie-tile" data-trailer-youtube-id="yfDUv3ZjH2k" data-toggle="modal" data-target="#trailer">
+      <h2>Shaun of the Dead</h2>
+      <img src="http://ia.media-imdb.com/images/M/MV5BMTU2NjA0NDk0NV5BMl5BanBnXkFtZTcwOTA0OTQzMw@@._V1_SX214_AL_.jpg" width="220" height="342" title="A man decides to turn his moribund life around by winning back his ex-girlfriend, reconciling his relationship with his mother, and dealing with an entire community that has returned from the dead to eat the living.">
+    </div>
+    <div class="movie-details">
+      <p align="left">
+        </br>
+        <b>Related Links:</b></br>
+        
+    <a href="https://www.youtube.com/results?search_query=Shaun+of+the+Dead+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Youtube</a></br>
+    
+    <a href="https://www.google.ca/search?q=Shaun+of+the+Dead+Best+Scenes" target="_blank"> Find 'Best Scenes' on Google</a></br>
+    
+    <a href="https://www.tumblr.com/search/Shaun+of+the+Dead+Quotes" target="_blank"> Find 'Quotes' on Tumblr</a></br>
+    
+    <a href="https://www.tumblr.com/search/Shaun+of+the+Dead+Best+Scenes" target="_blank"> Find 'Best Scenes' on Tumblr</a></br>
+    
+    <a href="https://www.google.ca/search?tbm=isch&q=Shaun+of+the+Dead+Best+Scenes" target="_blank"> Find 'Best Scenes' on Google Images</a></br>
+    </br>
+        <img src="imdb.png" alt=""><a href="http://www.imdb.com/title/tt0365748/" target="_blank">IMDB</a>&nbsp;&nbsp;&nbsp;<img src="rotten_tomatoes.jpeg" alt=""><a href="http://www.rottentomatoes.com/m/shaun_of_the_dead/" target="_blank">Rotten Tomatoes</a>
+      </p>
+    </div>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-base text-center">
+    <div class="movie-tile" data-trailer-youtube-id="lUloT3Dh3-E" data-toggle="modal" data-target="#trailer">
+      <h2>Snatch</h2>
+      <img src="http://ia.media-imdb.com/images/M/MV5BMTk5NzE0MDQyNl5BMl5BanBnXkFtZTcwNzk4Mjk3OA@@._V1_SY317_CR2,0,214,317_AL_.jpg" width="220" height="342" title="Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.">
+    </div>
+    <div class="movie-details">
+      <p align="left">
+        </br>
+        <b>Related Links:</b></br>
+        
+    <a href="https://www.google.ca/search?tbm=isch&q=Snatch+Best+Scenes" target="_blank"> Find 'Best Scenes' on Google Images</a></br>
+    
+    <a href="https://www.google.ca/search?q=Snatch+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Google</a></br>
+    
+    <a href="https://www.google.ca/search?tbm=isch&q=Snatch+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Google Images</a></br>
+    
+    <a href="https://www.google.ca/search?q=Snatch+Quotes" target="_blank"> Find 'Quotes' on Google</a></br>
+    
+    <a href="https://www.tumblr.com/search/Snatch+Quotes" target="_blank"> Find 'Quotes' on Tumblr</a></br>
+    </br>
+        <img src="imdb.png" alt=""><a href="http://www.imdb.com/title/tt0208092/" target="_blank">IMDB</a>&nbsp;&nbsp;&nbsp;<img src="rotten_tomatoes.jpeg" alt=""><a href="http://www.rottentomatoes.com/m/snatch/" target="_blank">Rotten Tomatoes</a>
+      </p>
+    </div>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-base text-center">
+    <div class="movie-tile" data-trailer-youtube-id="VkX7dHjL-aY" data-toggle="modal" data-target="#trailer">
+      <h2>The Fifth Element</h2>
+      <img src="http://ia.media-imdb.com/images/M/MV5BMTkzOTkwNTI4N15BMl5BanBnXkFtZTYwMDIzNzI5._V1_SY317_CR6,0,214,317_AL_.jpg" width="220" height="342" title="In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr Zorg at bay.">
+    </div>
+    <div class="movie-details">
+      <p align="left">
+        </br>
+        <b>Related Links:</b></br>
+        
+    <a href="https://www.youtube.com/results?search_query=The+Fifth+Element+Best+Scenes" target="_blank"> Find 'Best Scenes' on Youtube</a></br>
+    
+    <a href="https://www.google.ca/search?tbm=isch&q=The+Fifth+Element+Best+Scenes" target="_blank"> Find 'Best Scenes' on Google Images</a></br>
+    
+    <a href="https://www.tumblr.com/search/The+Fifth+Element+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Tumblr</a></br>
+    
+    <a href="https://www.tumblr.com/search/The+Fifth+Element+Best+Scenes" target="_blank"> Find 'Best Scenes' on Tumblr</a></br>
+    
+    <a href="https://www.google.ca/search?tbm=isch&q=The+Fifth+Element+Quotes" target="_blank"> Find 'Quotes' on Google Images</a></br>
+    </br>
+        <img src="imdb.png" alt=""><a href="http://www.imdb.com/title/tt0119116/" target="_blank">IMDB</a>&nbsp;&nbsp;&nbsp;<img src="rotten_tomatoes.jpeg" alt=""><a href="http://www.rottentomatoes.com/m/fifth_element/" target="_blank">Rotten Tomatoes</a>
+      </p>
+    </div>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-base text-center">
+    <div class="movie-tile" data-trailer-youtube-id="ByXuk9QqQkk" data-toggle="modal" data-target="#trailer">
+      <h2>Spirited Away</h2>
+      <img src="http://ia.media-imdb.com/images/M/MV5BMjYxMDcyMzIzNl5BMl5BanBnXkFtZTYwNDg2MDU3._V1_SY317_CR5,0,214,317_AL_.jpg" width="220" height="342" title="In the middle of her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and monsters; where humans are changed into beasts.">
+    </div>
+    <div class="movie-details">
+      <p align="left">
+        </br>
+        <b>Related Links:</b></br>
+        
+    <a href="https://www.tumblr.com/search/Spirited+Away+Best+Scenes" target="_blank"> Find 'Best Scenes' on Tumblr</a></br>
+    
+    <a href="https://www.google.ca/search?q=Spirited+Away+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Google</a></br>
+    
+    <a href="https://www.youtube.com/results?search_query=Spirited+Away+Best+Scenes" target="_blank"> Find 'Best Scenes' on Youtube</a></br>
+    
+    <a href="https://www.tumblr.com/search/Spirited+Away+Quotes" target="_blank"> Find 'Quotes' on Tumblr</a></br>
+    
+    <a href="https://www.youtube.com/results?search_query=Spirited+Away+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Youtube</a></br>
+    </br>
+        <img src="imdb.png" alt=""><a href="http://www.imdb.com/title/tt0245429/" target="_blank">IMDB</a>&nbsp;&nbsp;&nbsp;<img src="rotten_tomatoes.jpeg" alt=""><a href="http://www.rottentomatoes.com/m/spirited_away/" target="_blank">Rotten Tomatoes</a>
+      </p>
+    </div>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-base text-center">
+    <div class="movie-tile" data-trailer-youtube-id="6hB3S9bIaco" data-toggle="modal" data-target="#trailer">
+      <h2>The Shawshank Redemption</h2>
+      <img src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg" width="220" height="342" title="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.">
+    </div>
+    <div class="movie-details">
+      <p align="left">
+        </br>
+        <b>Related Links:</b></br>
+        
+    <a href="https://www.google.ca/search?tbm=isch&q=The+Shawshank+Redemption+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Google Images</a></br>
+    
+    <a href="https://www.youtube.com/results?search_query=The+Shawshank+Redemption+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Youtube</a></br>
+    
+    <a href="https://www.google.ca/search?q=The+Shawshank+Redemption+Best+Scenes" target="_blank"> Find 'Best Scenes' on Google</a></br>
+    
+    <a href="https://www.youtube.com/results?search_query=The+Shawshank+Redemption+Best+Scenes" target="_blank"> Find 'Best Scenes' on Youtube</a></br>
+    
+    <a href="https://www.youtube.com/results?search_query=The+Shawshank+Redemption+Quotes" target="_blank"> Find 'Quotes' on Youtube</a></br>
+    </br>
+        <img src="imdb.png" alt=""><a href="http://www.imdb.com/title/tt0111161/" target="_blank">IMDB</a>&nbsp;&nbsp;&nbsp;<img src="rotten_tomatoes.jpeg" alt=""><a href="http://www.rottentomatoes.com/m/shawshank_redemption/" target="_blank">Rotten Tomatoes</a>
+      </p>
+    </div>
+</div>
+
+<div class="col-md-4 col-lg-4 movie-base text-center">
+    <div class="movie-tile" data-trailer-youtube-id="8hP9D6kZseM" data-toggle="modal" data-target="#trailer">
+      <h2>Inception</h2>
+      <img src="http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX214_AL_.jpg" width="220" height="342" title="A thief who steals corporate secrets through use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.">
+    </div>
+    <div class="movie-details">
+      <p align="left">
+        </br>
+        <b>Related Links:</b></br>
+        
+    <a href="https://www.youtube.com/results?search_query=Inception+Quotes" target="_blank"> Find 'Quotes' on Youtube</a></br>
+    
+    <a href="https://www.google.ca/search?q=Inception+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Google</a></br>
+    
+    <a href="https://www.tumblr.com/search/Inception+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Tumblr</a></br>
+    
+    <a href="https://www.google.ca/search?tbm=isch&q=Inception+Quotes" target="_blank"> Find 'Quotes' on Google Images</a></br>
+    
+    <a href="https://www.youtube.com/results?search_query=Inception+Funny+Quotes" target="_blank"> Find 'Funny Quotes' on Youtube</a></br>
+    </br>
+        <img src="imdb.png" alt=""><a href="http://www.imdb.com/title/tt1375666/" target="_blank">IMDB</a>&nbsp;&nbsp;&nbsp;<img src="rotten_tomatoes.jpeg" alt=""><a href="http://www.rottentomatoes.com/m/inception/" target="_blank">Rotten Tomatoes</a>
+      </p>
+    </div>
+</div>
+
+    </div>
+  </body>
+</html>

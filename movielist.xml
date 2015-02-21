@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Movies>
+  <Movie>
+    <Title>Shaun of the Dead</Title>
+    <Description>A man decides to turn his moribund life around by winning back his ex-girlfriend, reconciling his relationship with his mother, and dealing with an entire community that has returned from the dead to eat the living.</Description>
+    <PosterURL>http://ia.media-imdb.com/images/M/MV5BMTU2NjA0NDk0NV5BMl5BanBnXkFtZTcwOTA0OTQzMw@@._V1_SX214_AL_.jpg</PosterURL>
+    <TrailerURL>https://www.youtube.com/watch?v=yfDUv3ZjH2k</TrailerURL>
+    <IMDB>http://www.imdb.com/title/tt0365748/</IMDB>
+    <RT>http://www.rottentomatoes.com/m/shaun_of_the_dead/</RT>
+  </Movie>
+  <Movie>
+    <Title>Snatch</Title>
+    <Description>Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.</Description>
+    <PosterURL>http://ia.media-imdb.com/images/M/MV5BMTk5NzE0MDQyNl5BMl5BanBnXkFtZTcwNzk4Mjk3OA@@._V1_SY317_CR2,0,214,317_AL_.jpg</PosterURL>
+    <TrailerURL>https://www.youtube.com/watch?v=lUloT3Dh3-E</TrailerURL>
+    <IMDB>http://www.imdb.com/title/tt0208092/</IMDB>
+    <RT>http://www.rottentomatoes.com/m/snatch/</RT>
+  </Movie>
+  <Movie>
+    <Title>The Fifth Element</Title>
+    <Description>In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr Zorg at bay.</Description>
+    <PosterURL>http://ia.media-imdb.com/images/M/MV5BMTkzOTkwNTI4N15BMl5BanBnXkFtZTYwMDIzNzI5._V1_SY317_CR6,0,214,317_AL_.jpg</PosterURL>
+    <TrailerURL>https://www.youtube.com/watch?v=VkX7dHjL-aY</TrailerURL>
+    <IMDB>http://www.imdb.com/title/tt0119116/</IMDB>
+    <RT>http://www.rottentomatoes.com/m/fifth_element/</RT>
+  </Movie>
+  <Movie>
+    <Title>Spirited Away</Title>
+    <Description>In the middle of her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and monsters; where humans are changed into beasts.</Description>
+    <PosterURL>http://ia.media-imdb.com/images/M/MV5BMjYxMDcyMzIzNl5BMl5BanBnXkFtZTYwNDg2MDU3._V1_SY317_CR5,0,214,317_AL_.jpg</PosterURL>
+    <TrailerURL>https://www.youtube.com/watch?v=ByXuk9QqQkk</TrailerURL>
+    <IMDB>http://www.imdb.com/title/tt0245429/</IMDB>
+    <RT>http://www.rottentomatoes.com/m/spirited_away/</RT>
+  </Movie>
+  <Movie>
+    <Title>The Shawshank Redemption</Title>
+    <Description>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</Description>
+    <PosterURL>http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg</PosterURL>
+    <TrailerURL>https://www.youtube.com/watch?v=6hB3S9bIaco</TrailerURL>
+    <IMDB>http://www.imdb.com/title/tt0111161/</IMDB>
+    <RT>http://www.rottentomatoes.com/m/shawshank_redemption/</RT>
+  </Movie>
+  <Movie>
+    <Title>Inception</Title>
+    <Description>A thief who steals corporate secrets through use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</Description>
+    <PosterURL>http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX214_AL_.jpg</PosterURL>
+    <TrailerURL>https://www.youtube.com/watch?v=8hP9D6kZseM</TrailerURL>
+    <IMDB>http://www.imdb.com/title/tt1375666/</IMDB>
+    <RT>http://www.rottentomatoes.com/m/inception/</RT>
+  </Movie>
+</Movies>
